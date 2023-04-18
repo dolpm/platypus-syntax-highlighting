@@ -1,0 +1,98 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "platypus",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#chars"
+    },
+		{
+      "include": "#comments"
+    },
+		{
+      "include": "#constants"
+    },
+		{
+      "include": "#variables"
+    }
+  ],
+  "repository": {
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.platypus",
+					"match": "\\b(\\d+|\\d*\\.\\d+)\\b"
+				},
+				{
+					"name": "constant.numeric.platypus",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"variables": {
+			"name": "variable.name.platypus",
+			"match": "[a-z|A-Z][a-z|A-Z|0-9|\\_]*"
+		},
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.platypus",
+          "match": "\\b(if|else|loop|while|as)\\b"
+        },
+				{
+          "name": "keyword.other.platypus",
+          "match": "\\b(pipe|mut)\\b"
+        },
+				{
+          "name": "keyword.pipe_in_out.platypus",
+          "match": "(\\-\\>|\\|\\>|\\<\\|)"
+        },
+				{
+          "name": "keyword.unop.platypus",
+          "match": "(%|@|\\+|\\-|\\\\|\\*|\\~|\\&|\\^)"
+        },
+				{
+          "name": "keyword.binop.platypus",
+          "match": "\\b(\\<\\=|\\>=|!=|==|\\<|\\>|and|or|\\|\\|)\\b"
+        }
+      ]
+    },
+		"comments": {
+			"name": "comment.block.platypus",
+      "patterns": [
+        {
+          "name": "constant.character.escape",
+          "match": "\\\\*(.*)\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.platypus",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "chars": {
+      "name": "string.quoted.single.platypus",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "main.ppus"
+}

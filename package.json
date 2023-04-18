@@ -1,0 +1,25 @@
+{
+  "name": "platypus-syntax-highlighting",
+  "displayName": "platypus-syntax-highlighting",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "platypus",
+      "aliases": ["platypus", "platypus"],
+      "extensions": [".ppus"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "platypus",
+      "scopeName": "main.ppus",
+      "path": "./syntaxes/platypus.tmLanguage.json"
+    }]
+  }
+}
