@@ -92,12 +92,10 @@
     },
     "chars": {
       "name": "string.quoted.single.platypus",
-      "begin": "'",
-      "end": "'",
       "patterns": [
         {
           "name": "constant.character.escape",
-          "match": "\\\\."
+          "match": "\\'.\\'"
         }
       ]
     }
