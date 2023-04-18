@@ -18,7 +18,7 @@
       "include": "#constants"
     },
 		{
-      "include": "#variables"
+      "include": "#entities"
     }
   ],
   "repository": {
@@ -30,13 +30,21 @@
 				},
 				{
 					"name": "constant.numeric.platypus",
-					"match": "\\b(true|false)\\b"
+					"match": "\\b(true|false|\\(\\))\\b"
 				}
 			]
 		},
-		"variables": {
-			"name": "variable.name.platypus",
-			"match": "[a-z|A-Z][a-z|A-Z|0-9|\\_]*"
+		"entities": {
+			"patterns": [
+				{
+					"name": "entity.name.type",
+					"match": "\\b(char|int|float|bool|unit|tuple|string|str|thing|box|vector)\\b"
+				},
+				{
+					"name": "entity.name",
+					"match": "\\b([a-z|A-Z][a-z|A-Z|0-9|\\_]*)\\b"
+				}
+			]
 		},
     "keywords": {
       "patterns": [
