@@ -30,7 +30,7 @@
 				},
 				{
 					"name": "constant.numeric.platypus",
-					"match": "\\b(true|false|\\(\\))\\b"
+					"match": "\\b(true|false)\\b"
 				}
 			]
 		},
@@ -57,16 +57,16 @@
           "match": "\\b(pipe|mut)\\b"
         },
 				{
-          "name": "keyword.pipe_in_out.platypus",
-          "match": "(\\-\\>|\\|\\>|\\<\\|)"
+          "name": "keyword.binop.platypus",
+          "match": "\\b(!=|==|and|or|\\|\\|)\\b"
+        },
+				{
+          "name": "keyword.misc.platypus",
+          "match": "(\\\\|\\->|\\|>|<\\||<[\\=]?|>[\\=]?)"
         },
 				{
           "name": "keyword.unop.platypus",
-          "match": "(%|@|\\+|\\-|\\\\|\\*|\\~|\\&|\\^)"
-        },
-				{
-          "name": "keyword.binop.platypus",
-          "match": "\\b(\\<\\=|\\>=|!=|==|\\<|\\>|and|or|\\|\\|)\\b"
+          "match": "(%|@|\\+|\\-|\\*|\\~|\\&|\\^)"
         }
       ]
     },
